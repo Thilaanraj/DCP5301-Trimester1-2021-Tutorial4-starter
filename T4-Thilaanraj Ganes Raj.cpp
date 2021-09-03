@@ -21,8 +21,8 @@ void calNodes(BinTreeNode *node);
 BinTreeNode *root, *parent1, *parent2, *parent3;
 
 int main(){
-	//Call function growTree to grow the tree above
 	
+	growTree();
 	cout<<"\nPreorder traversal:\t";  preorder(root);
 	cout<<"\nPostorder traversal:\t"; postorder(root);
 	cout<<"\nInorder traversal:\t";
@@ -33,6 +33,30 @@ int main(){
 	
 	return 0;
 }
+
+void growTree(void){
+	
+	root = initBinTreeNode('A');
+	root -> left = initBinTreeNode('B');
+	root -> right = initBinTreeNode('C');
+	parent1 = root -> left;
+	parent1 -> left = initBinTreeNode('D');
+	parent1 -> right = initBinTreeNode('E');
+	parent2 = parent1 -> right;
+	parent2 -> left = initBinTreeNode('H');
+	parent2 -> right = initBinTreeNode('I');
+	
+	parent1 = root ->right;
+	parent1 -> left = initBinTreeNode('F');
+	parent1 -> right = initBinTreeNode('G');
+	parent2 = parent1 -> left
+	parent2 -> left = initBinTreeNode('J');
+	parent2 -> right = initBinTreeNode('K');
+	parent3 = parent2 -> right;
+	parent3 -> right = initBinTreeNode('L');
+		
+}
+
 
 BinTreeNode *initBinTreeNode(char data){
 	BinTreeNode *temp;
