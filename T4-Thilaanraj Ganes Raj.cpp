@@ -1,4 +1,8 @@
 //Thilaanraj Ganes Raj (1191202463)
+//Preoder : A, B, D, E, H, I, C, F, J, K, L, G
+//Inorder : D, B, H, E, I, A, J, F, L, K, C, G
+//Postoder: D, H, E, I, B, J, L, K, F, G, C, A
+
 
 #include <iostream>
 using namespace std;
