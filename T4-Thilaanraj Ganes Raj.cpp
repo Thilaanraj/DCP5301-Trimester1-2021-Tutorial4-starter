@@ -25,8 +25,9 @@ int main(){
 	growTree();
 	cout<<"\nPreorder traversal:\t";  preorder(root);
 	cout<<"\nPostorder traversal:\t"; postorder(root);
-	cout<<"\nInorder traversal:\t";
-	//Call function inorder to traverse and print the data of the tree’s nodes
+	cout<<"\nInorder traversal:\t"; inorder(root);
+	
+	
 
 	//Call function calNodes to calculate the total no. of tree’s nodes
 	//Print the total no. of tree’s nodes
@@ -66,6 +67,8 @@ BinTreeNode *initBinTreeNode(char data){
 	temp->right = NULL;
 	return temp;
 }
+
+
 void preorder(BinTreeNode *node){
 	if(node){	
 		cout<<node->data<<' ';
@@ -78,5 +81,13 @@ void postorder(struct BinTreeNode *node){
 		postorder(node->left);
 		postorder(node->right);
 		cout<<node->data<<' ';
+	}
+}
+void inorder(BinTreeNode*node){
+	if(node)
+	{
+		inorder(node -> left);
+		cout<<node->data<<'';
+		inorder(node -> right);
 	}
 }
